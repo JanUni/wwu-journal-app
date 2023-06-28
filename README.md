@@ -1,34 +1,65 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Einleitung & Hintergrund
 
-First, run the development server:
+Diese Next.js 13 basierte Anwendung dient der Veranschaulichung der Seminararbeit "Serverside Rendering vs Clientside Rendering in Next.js."
+
+Diese Applikation legt dabei keinen Fokus auf Design oder umfangreiche Features sondern dient lediglich der exemplarischen 
+Darstellung der Projektstruktur in Next.js sowie beispielhafter Einsatzszenarien von Next.js-Kernfeatures. 
+Dazu zählt bspw. die Nutzung des App-Directory, serverseitiges und clientseitiges Rendering und auch das Caching 
+von fetch-Requests.
+
+Wesentliche Code-Stellen sind dabei der Nachvollziehbarkeit halber markiert.
+
+## Applikation starten
+
+Nachdem der Code geklont wurde, sollten zunächst alle Dependencies installiert werden:
+
+```bash
+npm i
+```
+
+Anschließend kann die Next.js Applikation gestartet werden:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Code-Struktur
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Alles für Next-js Wesentliche liegt im App-Directory. Dieses Directory wurde mit Next.js 13 neu eingeführt.
+In dem App-Directory ist zu Oberst das Api-Directory zu finden. In diesem Directory liegen alle Endpoints, welche die App 
+zur Verfügung stellt. In unserem Beispiel ist dass nur der "journal-entries"-Route. Diese Route bietet wiederum einen HTTP-GET- und HTTP-POST-Endpunkt.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Wichtig zu beachten ist hier, dass die aller meisten Namen der Konvention von Next.js entsprechen und somit auch so benannt werden sollten.
+Bspw. "route.tsx", "export async function POST(...)".
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
