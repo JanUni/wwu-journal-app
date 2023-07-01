@@ -1,5 +1,3 @@
-"use client";
-
 interface Entry {
   title: string;
   content: string;

@@ -13,11 +13,16 @@ const journalEntries = [
   },
 ];
 
-// Runs server-side
+/**
+ * Gibt die Objekte aus journalEntries zurück.
+ */
 export async function GET() {
   return NextResponse.json(journalEntries);
 }
 
+/**
+ * Fügt neue Objekte dem journalEntries-Array hinzu.
+ */
 export async function POST(req: Request) {
   const { title, content } = await req.json();
   const entry = { title: title, content: content };

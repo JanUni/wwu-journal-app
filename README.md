@@ -34,6 +34,12 @@ zur Verfügung stellt. In unserem Beispiel ist dass nur der "journal-entries"-Ro
 Wichtig zu beachten ist hier, dass die aller meisten Namen der Konvention von Next.js entsprechen und somit auch so benannt werden sollten.
 Bspw. "route.tsx", "export async function POST(...)".
 
+Alle weiteren Ordner in dem App-Directory entsprechen der URL-Struktur. Bspw. "create-entry" der späteren Route "localhost:3000/create-entry".
+In der page.tsx (ebenfalls Namens-Konvention) werden dann die React-Komponenten geladen, die später in der Route angezeigt werden sollen.
+
+Die aufgerufenen Komponenten befinden sich dann in dem "components-ordner". Diese Trennung dient lediglich allgemeinen Übersicht. Es wäre
+auch möglich gewesen, sie direkt in der Next-Route zu implementieren.
+
 
 
 

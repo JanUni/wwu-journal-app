@@ -1,3 +1,7 @@
+/**
+ * Das 'use client' sorgt dafür, dass diese Komponente am Server gerendert wird.
+ * Dies ist notwendig, da wir hier mit Lifecycle-Funktionen arbeiten (useState)
+ */
 "use client";
 
 import React, { useState } from "react";
@@ -15,8 +19,9 @@ export default function CreateEntry() {
   };
 
   const handleSubmit = () => {
-    // Hier sollte der Code für den API-Aufruf zum Senden des Eintrags an den Endpoint stehen
-    // Zum Beispiel: fetch('/api/endpoint', { method: 'POST', body: inputText });
+    /**
+     * Einträge an Api-Endpunkt (app/api/journal-entries/route.tsx) senden.
+     */
     fetch("/api/journal-entries", {
       method: "POST",
       headers: {
@@ -25,7 +30,9 @@ export default function CreateEntry() {
       body: JSON.stringify({ title: inputTitle, content: inputText }),
     });
 
-    // Nach dem Senden des Eintrags können Sie den Inhalt des Eingabefelds zurücksetzen
+    /**
+     * Input Felder nach Senden des Eintrags zurücksetzen.
+     */
     setInputTitle("");
     setInputText("");
   };

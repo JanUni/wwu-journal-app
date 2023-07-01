@@ -1,4 +1,4 @@
-import EntriesList from "@/components/entries-list.component";
+import EntriesList from "@/components/entry-list/entries-list.component";
 
 interface Entry {
   title: string;
@@ -6,9 +6,14 @@ interface Entry {
 }
 
 /**
- * This component is rendered serverside.
- * It gets it's data by calling the Endpoint under api/journal-entries/route.tsx.
- * The fetch-request will not get cached since we always want to get fresh data.
+ * Diese Komponente wird Serverseitig gerendert.
+ * Sie bekommt ihre Daten, indem der Endpunkt unter "api/journal-entries/route.tsx aufgerufen wird.
+ * Der Fetch-Request wird nicht gecached, da wir immer die aktuellsten Daten bekommen wollen.
+ *
+ * Um immer die aktuellsten Daten zu sehen, ist es notwendig die Seite einmal manuell zu aktualisieren.
+ * Dies könnte man umgehen, indem man mit einem React-State arbeitet, der dafür sorgt, dass die Komponente sich
+ * selbstständig aktualisiert wenn ein neuer Eintrag getätigt wurde. Hierauf wurde allerdings aufgrund des anderen
+ * Fokus dieser Arbeit verzichtet.
  */
 export default async function JournalEntriesPage() {
   // deduped
